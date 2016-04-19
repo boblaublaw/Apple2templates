@@ -1,10 +1,11 @@
 ;
 ;  main.s
-;  test_asm
+;  hello_world_asm
 ;
-;  Created by joe on 4/17/16.
+;  Created by joe on 4/19/16.
 ;  Copyright © 2016 joe. All rights reserved.
 ;
+
 
 COUT = $fded
 KEYBOARD = $c000
@@ -26,4 +27,4 @@ wait:
     lda STROBE
     rts
 
-msg:    .asciiz "HELLO ALSO, ALISON"
+msg:    .asciiz "HELLO, WORLD"

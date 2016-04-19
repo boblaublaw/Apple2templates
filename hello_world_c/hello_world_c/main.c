@@ -1,8 +1,8 @@
 /*
  * main.c
- * test_C_program
+ * hello_world_c
  *
- * Created by joe on 4/17/16.
+ * Created by joe on 4/19/16.
  * Copyright (c) 2016 joe. All rights reserved.
  *
  */
@@ -14,7 +14,7 @@
 
 int main(void)
 {
-    printf("HELLO ALISON!\n");
+    printf("HELLO, WORLD!\n");
     cgetc();
     return 0;
 }

@@ -66,7 +66,6 @@ endif
 ifeq ($(filter $(MACHINE), apple2 apple2enh),)
     MACHCONFIG += -C $(MACHINE).cfg
 endif
-MACHCONFIG+= --cpu $(CPU)
 
 .PHONY: all execute clean
 	
@@ -95,14 +94,13 @@ $(DISKIMAGE): $(PGM)
 execute: $(DISKIMAGE)
 	osascript make/V2Make.scpt "$(CWD)" "$(PGM)" "$(CWD)/make/DevApple.vii" "$(EXECCMD)"
 
-%.o: %.c
-	$(CL65) $(MACHCONFIG) $(CFLAGS) --create-dep -l -c -o $@ $<
+%.o:	%.c
+	$(CL65) $(MACHCONFIG) $(CFLAGS) --create-dep -c -o $@ $<
 	sed -i .bak 's/\.s:/.o:/' $(@:.o=.u)
 	rm -f $(@:.o=.u).bak
 
-%.o: %.s
-	#$(CA65) $(MACHCONFIG) --cpu $(CPU) $(ASMFLAGS) -l $(@:.o=.lst) -o $@ $<
-	$(CA65) $(MACHCONFIG) $(ASMFLAGS) -l $(@:.o=.lst) -o $@ $<
+%.o:	%.s
+	$(CL65) $(MACHCONFIG) --cpu $(CPU) $(ASMFLAGS) -l -c -o $@ $<
 
 $(OBJS): Makefile
 

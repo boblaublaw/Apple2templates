@@ -1,0 +1,21 @@
+Modules list:
+-------------
+main.o:
+    CODE              Offs = 000000   Size = 000026
+
+
+Segment list:
+-------------
+Name                  Start   End     Size
+--------------------------------------------
+CODE                  000803  000828  000026
+
+
+Exports list:
+-------------
+
+
+
+Imports list:
+-------------
+

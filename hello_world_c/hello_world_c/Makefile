@@ -16,19 +16,19 @@ include make/head.mk
 # target, where in memory to put it, etc.
 
 # The name of your system or binary file to build goes here:
-PGM=test
+PGM=hwc
 
 # Set the config you are building for.  See these pages for details:
 #   http://cc65.github.io/cc65/doc/apple2.html#s4
 #   http://cc65.github.io/cc65/doc/apple2enh.html#s4
 #
 # Uncomment the one you want below (the first one is the default):
-#MACHINE = apple2
+#    MACHINE = apple2
 #    MACHINE = apple2-dos33
 #    MACHINE = apple2-system
 #    MACHINE = apple2-loader
 #    MACHINE = apple2-reboot
-MACHINE = apple2enh
+#    MACHINE = apple2enh
 #    MACHINE = apple2enh-dos33
 #    MACHINE = apple2enh-system
 #    MACHINE = apple2enh-loader
@@ -36,13 +36,13 @@ MACHINE = apple2enh
 
 # Uncomment and set this to your starting address in Apple II memory
 # if necessary:
-#START_ADDR = 6000
+#    START_ADDR = 6000
 
 # Set the default CPU to assemble for.  You can change this in the
 # body of a .s file using control commands like ".PC02".  Uncomment
 # the one you want below (the first one is the default):
 #    CPU = 6502
-CPU = 65SC02
+#    CPU = 65SC02
 #    CPU = 65C02
 #    CPU = 65816
 # Note: You can assemble for 65816 in 16-bit mode but the C compiler
@@ -67,7 +67,7 @@ CPU = 65SC02
 # If you have a non-standard cc65 install, you may need to change
 # some of these.  Uncomment the following line and change it to the
 # correct path to CC65_HOME if the default is not correct:
-export CC65_HOME := /usr/local/share/cc65/
+#    export CC65_HOME := /usr/local/lib/cc65
 # 
 # If the path to the cc65 binaries is not correct, uncomment this
 # line and change it:
