@@ -95,7 +95,7 @@ execute: $(DISKIMAGE)
 	osascript make/V2Make.scpt "$(CWD)" "$(PGM)" "$(CWD)/make/DevApple.vii" "$(EXECCMD)"
 
 %.o:	%.c
-	$(CL65) $(MACHCONFIG) $(CFLAGS) --create-dep -c -o $@ $<
+	$(CL65) $(MACHCONFIG) $(CFLAGS) -l --create-dep -c -o $@ $<
 	sed -i .bak 's/\.s:/.o:/' $(@:.o=.u)
 	rm -f $(@:.o=.u).bak
 

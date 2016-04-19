@@ -3,6 +3,7 @@
 *.lst
 *.map
 *.dsk
+*.u
 
 # binaries
 asm/hello_world_asm/hwasm
