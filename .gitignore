@@ -1,0 +1,11 @@
+# build artifacts:
+*.o
+*.lst
+*.map
+*.dsk
+
+# binaries
+asm/hello_world_asm/hwasm
+c/hello_world_c/hwc
+
+
